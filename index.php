@@ -3,26 +3,18 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$files = array();
+$files = glob('api/Answers/*.php');
 
 $test = glob('api/*.php');
-//$test = array_merge($test, );
-//$test = array_merge($test, glob('api/Commands/*.php'));
-//$test = array_merge($test, glob('api/Events/*.php'));
-//$test = array_merge($test, glob('api/Exceptions/*.php'));
-//$test = array_merge($test, glob('api/FileUpload/*.php'));
-//$test = array_merge($test, glob('api/Helpers/*.php'));
-//$test = array_merge($test, glob('api/HttpClients/*.php'));
-//$test = array_merge($test, glob('api/Objects/*.php'));
-//$test = array_merge($test, glob('api/Objects/*.php'));
-//$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
-//$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
 
-var_dump(glob('api/Answers/*.php'));die;
 
-include 'api/Api.php';
+var_dump($files);
+foreach ($files as $file){
+    include $file;
+}
+var_dump('DONE');die;
 
-die('1234');
+
 use Telegram\Bot\Api;
 
 $telegram = new Api('329348159:AAHVckKsabjURvYS4ctcS3wVNlOnb6BnyVY');
