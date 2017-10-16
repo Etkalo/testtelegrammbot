@@ -26,7 +26,7 @@ use Telegram\Bot\Keyboard\Keyboard;
  */
 class Api
 {
-    use EmitsEvents;
+//    use EmitsEvents;
 
     /**
      * @var string Version number of the Telegram Bot PHP SDK.
