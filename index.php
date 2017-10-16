@@ -1,4 +1,5 @@
 <?php
+die('123');
 foreach (glob("api/*.php") as $filename)
 {
     include $filename;
@@ -8,7 +9,7 @@ use Telegram\Bot\Api;
 
 $telegram = new Api('329348159:AAHVckKsabjURvYS4ctcS3wVNlOnb6BnyVY');
 
-$result = $telegram -> getWebhookUpdates(); //Передаем в переменную $result полную информацию о сообщении пользователя
+$result = $telegram->getWebhookUpdates(); //Передаем в переменную $result полную информацию о сообщении пользователя
 
 $text = $result["message"]["text"]; //Текст сообщения
 $chat_id = $result["message"]["chat"]["id"]; //Уникальный идентификатор пользователя
