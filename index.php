@@ -1,9 +1,7 @@
 <?php
 
-foreach (glob("api/*.php") as $filename)
-{
-    include $filename;
-}
+include 'api/Api.php';
+
 die('1234');
 use Telegram\Bot\Api;
 
