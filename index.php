@@ -6,19 +6,19 @@ error_reporting(E_ALL);
 $files = array();
 
 $test = glob('api/*.php');
-$test = array_merge($test, glob('api/Answers/*.php'));
-$test = array_merge($test, glob('api/Commands/*.php'));
-$test = array_merge($test, glob('api/Events/*.php'));
-$test = array_merge($test, glob('api/Exceptions/*.php'));
-$test = array_merge($test, glob('api/FileUpload/*.php'));
-$test = array_merge($test, glob('api/Helpers/*.php'));
-$test = array_merge($test, glob('api/HttpClients/*.php'));
-$test = array_merge($test, glob('api/Objects/*.php'));
-$test = array_merge($test, glob('api/Objects/*.php'));
-$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
-$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
+//$test = array_merge($test, );
+//$test = array_merge($test, glob('api/Commands/*.php'));
+//$test = array_merge($test, glob('api/Events/*.php'));
+//$test = array_merge($test, glob('api/Exceptions/*.php'));
+//$test = array_merge($test, glob('api/FileUpload/*.php'));
+//$test = array_merge($test, glob('api/Helpers/*.php'));
+//$test = array_merge($test, glob('api/HttpClients/*.php'));
+//$test = array_merge($test, glob('api/Objects/*.php'));
+//$test = array_merge($test, glob('api/Objects/*.php'));
+//$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
+//$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
 
-var_dump($test);die;
+var_dump(glob('api/Answers/*.php'));die;
 
 include 'api/Api.php';
 
