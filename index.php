@@ -3,20 +3,22 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//$test = glob('api/*.php');
-//$test = array_merge($test, glob('api/Answers/*.php'));
-//$test = array_merge($test, glob('api/Commands/*.php'));
-//$test = array_merge($test, glob('api/Events/*.php'));
-//$test = array_merge($test, glob('api/Exceptions/*.php'));
-//$test = array_merge($test, glob('api/FileUpload/*.php'));
-//$test = array_merge($test, glob('api/Helpers/*.php'));
-//$test = array_merge($test, glob('api/HttpClients/*.php'));
-//$test = array_merge($test, glob('api/Objects/*.php'));
-//$test = array_merge($test, glob('api/Objects/*.php'));
-//$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
-//$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
+$test = glob('api/*.php');
+$test = array_merge($test, glob('api/Answers/*.php'));
+$test = array_merge($test, glob('api/Commands/*.php'));
+$test = array_merge($test, glob('api/Events/*.php'));
+$test = array_merge($test, glob('api/Exceptions/*.php'));
+$test = array_merge($test, glob('api/FileUpload/*.php'));
+$test = array_merge($test, glob('api/Helpers/*.php'));
+$test = array_merge($test, glob('api/HttpClients/*.php'));
+$test = array_merge($test, glob('api/Objects/*.php'));
+$test = array_merge($test, glob('api/Objects/*.php'));
+$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
+$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
 
-include 'api/Api.php';
+foreach ($test as $file){
+    include $file;
+}
 die('123');
 use Telegram\Bot\Api;
 
@@ -32,7 +34,7 @@ $name = $result["message"]["from"]["username"]; //Юзернейм пользо�
 if($text){
     if ($text == "/start") {
         $reply = "Добро пожаловать в бота!";
-        $telegram->sendMessage([ 'chat_id' => $chat_id, 'text' => $reply);
+        $telegram->sendMessage([ 'chat_id' => $chat_id, 'text' => $reply]);
     }elseif ($text == "/help") {
         $reply = "Информация с помощью.";
         $telegram->sendMessage([ 'chat_id' => $chat_id, 'text' => $reply ]);
