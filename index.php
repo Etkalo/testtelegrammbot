@@ -20,8 +20,6 @@ foreach ($test as $file){
     include $file;
 }
 
-
-
 use Telegram\Bot\Api;
 
 $telegram = new Api('329348159:AAHVckKsabjURvYS4ctcS3wVNlOnb6BnyVY');
