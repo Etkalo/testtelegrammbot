@@ -1,10 +1,10 @@
 <?php
-die('123');
+
 foreach (glob("api/*.php") as $filename)
 {
     include $filename;
 }
-
+die('1234');
 use Telegram\Bot\Api;
 
 $telegram = new Api('329348159:AAHVckKsabjURvYS4ctcS3wVNlOnb6BnyVY');
