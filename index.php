@@ -19,7 +19,7 @@ $test = array_merge($test, glob('api/Objects/InputContent/*.php'));
 foreach ($test as $file){
     include $file;
 }
-
+die('123');
 use Telegram\Bot\Api;
 
 $telegram = new Api('329348159:AAHVckKsabjURvYS4ctcS3wVNlOnb6BnyVY');
