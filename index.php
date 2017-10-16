@@ -3,7 +3,21 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-var_dump(glob('api/*.php'));die;
+$files = array();
+
+array_merge($files, glob('api/Answers/*.php'));
+array_merge($files, glob('api/Commands/*.php'));
+array_merge($files, glob('api/Events/*.php'));
+array_merge($files, glob('api/Exceptions/*.php'));
+array_merge($files, glob('api/FileUpload/*.php'));
+array_merge($files, glob('api/Helpers/*.php'));
+array_merge($files, glob('api/HttpClients/*.php'));
+array_merge($files, glob('api/Objects/*.php'));
+array_merge($files, glob('api/Objects/*.php'));
+array_merge($files, glob('api/Objects/InlineQuery/*.php'));
+array_merge($files, glob('api/Objects/InputContent/*.php'));
+
+var_dump($files);die;
 
 include 'api/Api.php';
 
