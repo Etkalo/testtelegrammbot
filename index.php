@@ -3,22 +3,20 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$test = glob('api/*.php');
-$test = array_merge($test, glob('api/Answers/*.php'));
-$test = array_merge($test, glob('api/Commands/*.php'));
-$test = array_merge($test, glob('api/Events/*.php'));
-$test = array_merge($test, glob('api/Exceptions/*.php'));
-$test = array_merge($test, glob('api/FileUpload/*.php'));
-$test = array_merge($test, glob('api/Helpers/*.php'));
-$test = array_merge($test, glob('api/HttpClients/*.php'));
-$test = array_merge($test, glob('api/Objects/*.php'));
-$test = array_merge($test, glob('api/Objects/*.php'));
-$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
-$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
+//$test = glob('api/*.php');
+//$test = array_merge($test, glob('api/Answers/*.php'));
+//$test = array_merge($test, glob('api/Commands/*.php'));
+//$test = array_merge($test, glob('api/Events/*.php'));
+//$test = array_merge($test, glob('api/Exceptions/*.php'));
+//$test = array_merge($test, glob('api/FileUpload/*.php'));
+//$test = array_merge($test, glob('api/Helpers/*.php'));
+//$test = array_merge($test, glob('api/HttpClients/*.php'));
+//$test = array_merge($test, glob('api/Objects/*.php'));
+//$test = array_merge($test, glob('api/Objects/*.php'));
+//$test = array_merge($test, glob('api/Objects/InlineQuery/*.php'));
+//$test = array_merge($test, glob('api/Objects/InputContent/*.php'));
 
-foreach ($test as $file){
-    include $file;
-}
+include 'api/Api.php';
 die('123');
 use Telegram\Bot\Api;
 
