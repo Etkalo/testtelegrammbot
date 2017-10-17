@@ -9,5 +9,8 @@
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
+  },
+  "autoload": {
+    "psr-0": {"Bot": "src/"}
   }
 }
