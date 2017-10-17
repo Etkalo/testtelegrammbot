@@ -5,11 +5,7 @@ error_reporting(E_ERROR);
 
 include('vendor/autoload.php');
 
-
-use Bot\Drinks;
-use Bot\Bot;
-
-$bot = new Bot();
+$bot = new \Bot\Bot();
 $bot->init();
 
 $telegram = $bot->telegram;
@@ -22,7 +18,7 @@ if ($text) {
         $reply = "Привет, спроси у меня что тебе выпить";
 
     } elseif (strpos($text, 'бух') || strpos($text, 'пить')) {
-        $drinks = new Drinks();
+        $drinks = new \Bot\Drinks();
         $reply = $drinks->getReply();
     } else {
         $reply = 'Спроси у меня что выпить, я другого не умею';
