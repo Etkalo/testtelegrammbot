@@ -4,7 +4,7 @@
     "monolog/monolog": "^1.22",
     "twig/twig": "^2.0",
     "symfony/twig-bridge": "^3",
-    "irazasyed/telegram-bot-sdk": "^2.0"
+    "irazasyed/telegram-bot-sdk": "^2.0",
     "botman/botman": "^2.1"
   },
   "require-dev": {
