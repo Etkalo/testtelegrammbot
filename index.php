@@ -15,12 +15,18 @@ $text = $result["message"]["text"]; //Текст сообщения
 $chat_id = $result["message"]["chat"]["id"]; //Уникальный идентификатор пользователя
 $name = $result["message"]["from"]["username"]; //Юзернейм пользователя
 
+$drinks = array(
+    'Винчик',
+    'Водочку',
+    'Коньяк',
+    'Кубу',
+);
 
 if($text) {
     if ($text == "/start") {
         $reply = "Привет, Я Люботинский бот";
-    } elseif (strpos($text, 'бухнуть')) {
-        $reply = 'удача';
+    } elseif (strpos($text, 'бух') || strpos($text, 'выпит')) {
+        $reply = 'Советую выпить ' . array_rand($drinks, 1);
     }else {
         $reply = 'Я еще маленький и не знаю таких слов';
     }
