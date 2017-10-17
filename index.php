@@ -26,7 +26,8 @@ if($text) {
     if ($text == "/start") {
         $reply = "Привет, Я Люботинский бот";
     } elseif (strpos($text, 'бух') || strpos($text, 'выпит')) {
-        $reply = 'Советую выпить ' . array_rand($drinks, 1);
+        $key = array_rand($drinks, 1)
+        $reply = 'Советую выпить ' . $drinks[$key];
     }else {
         $reply = 'Я еще маленький и не знаю таких слов';
     }
