@@ -11,6 +11,7 @@ class Bot
     public $text;
     public $chat_id;
     public $name;
+    public $firstName;
 
     public function init()
     {
@@ -20,6 +21,7 @@ class Bot
 
         $this->text = $this->result["message"]["text"]; //Текст сообщения
         $this->chat_id = $this->result["message"]["chat"]["id"]; //Уникальный идентификатор пользователя
-        $this->name = $this->result["message"]["from"]["username"]; //Юзернейм пользователя
+        $this->name = $this->result["message"]["from"]["username"];
+        $this->name = $this->result["message"]["from"]["first_name"];
     }
 }

@@ -15,7 +15,7 @@ $name = $bot->name;
 
 if ($text) {
     if ($text == "/start") {
-        $reply = "Привет, спроси у меня что тебе выпить";
+        $reply = "Привет, $bot->firstName, спроси у меня что тебе выпить";
 
     } elseif (strpos($text, 'бух') || strpos($text, 'пить')) {
         $drinks = new \Bot\Drinks();
