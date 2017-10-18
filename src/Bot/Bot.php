@@ -14,7 +14,7 @@ class Bot
 
     public function init()
     {
-        $this->telegram = new Api('465541883:AAG4FocS5i3KjdrBEwDqyLIEnFDcPFfyzeY');
+        $this->telegram = new Api('461680920:AAFb2wrg9kHoFiDUjhwbIHHSeWjAHO5HtTY');
 
         $this->result = $this->telegram->getWebhookUpdates(); //Передаем в переменную $result полную информацию о сообщении пользователя
 
