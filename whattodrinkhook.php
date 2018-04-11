@@ -12,6 +12,7 @@ $telegram = $bot->telegram;
 $text = $bot->text;
 $chat_id = $bot->chat_id;
 $name = $bot->name;
+$firstName = $bot->firstName;
 
 if ($text) {
     if ($text == "/start") {
@@ -23,8 +24,8 @@ if ($text) {
     } else {
         $reply = 'Спроси у меня что выпить, я другого не умею';
     }
-//    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
-    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply . ' ' . $chat_id]);
+    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
+    $telegram->sendMessage(['chat_id' => 366908551, 'text' => "username - $name Имя - $firstName Сообщение - $text" ]);
 } else {
     $telegram->sendMessage([ 'chat_id' => $chat_id, 'text' => "Отправьте текстовое сообщение." ]);
 }
