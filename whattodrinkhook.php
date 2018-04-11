@@ -23,7 +23,8 @@ if ($text) {
     } else {
         $reply = 'Спроси у меня что выпить, я другого не умею';
     }
-    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
+//    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
+    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply . ' ' . $chat_id]);
 } else {
     $telegram->sendMessage([ 'chat_id' => $chat_id, 'text' => "Отправьте текстовое сообщение." ]);
 }
