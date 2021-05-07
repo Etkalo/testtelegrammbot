@@ -20,7 +20,7 @@ if ($text) {
 
     } elseif (strpos($text, 'бух') || strpos($text, 'пить')) {
         $drinks = new \Bot\Drinks();
-        $reply = $drinks->getReply();
+        $reply = sprintf('%s, %s', $firstName, $drinks->getReply());
     } else {
         $reply = 'Спроси у меня что выпить, я другого не умею';
     }
