@@ -1,2 +1,3 @@
 <?php
-echo 'Maybe Next Time';die;
+echo 'Maybe Next Time';
+die;
